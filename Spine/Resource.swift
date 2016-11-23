@@ -109,7 +109,7 @@ open class Resource: NSObject, NSCoding {
 	public var meta: [String: Any]?
 	
 	/// Raw relationship data keyed by relationship name.
-	var relationships: [String: RelationshipData] = [:]
+	public var relationships: [String: RelationshipData] = [:]
 	
 	public required override init() {
 		super.init()
