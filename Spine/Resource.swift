@@ -41,8 +41,16 @@ public func ==(lhs: ResourceIdentifier, rhs: ResourceIdentifier) -> Bool {
 	return lhs.type == rhs.type && lhs.id == rhs.id
 }
 
+public func ==(lhs: String, rhs: ResourceIdentifier) -> Bool {
+    return lhs == rhs.id
+}
+
+public func getResourceIdentifierID(lhs: ResourceIdentifier) -> String {
+    return lhs.id
+}
+
 /// A RelationshipData struct holds data about a relationship.
-struct RelationshipData {
+public struct RelationshipData {
 	var selfURL: URL?
 	var relatedURL: URL?
 	var data: [ResourceIdentifier]?
